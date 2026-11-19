@@ -4,7 +4,7 @@
   "private": true,
  "scripts": {
   "dev": "next dev",
-  "api": "json-server --watch mock/db.json --port 4000 --delay 400",
+  "api": "json-server --watch mock/db.json --host 127.0.0.1 --port 4000 --delay 400",
   "dev:all": "concurrently \"npm run api\" \"npm run dev\"",
   "build": "next build",
   "start": "next start",

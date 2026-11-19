@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:4000";
 
 export class ApiError extends Error {
   status: number;
@@ -20,12 +20,14 @@ export async function apiRequest<T>(
 ): Promise<ApiResponse<T>> {
   let response: Response;
 
+  const headers: HeadersInit = options.body
+    ? { "Content-Type": "application/json" }
+    : {};
+
   try {
-    response = await fetch(`${BASE_URL}${path}`, {
-      headers: { "Content-Type": "application/json" },
-      ...options,
-    });
-  } catch {
+    response = await fetch(`${BASE_URL}${path}`, { ...options, headers });
+  } catch (error) {
+    console.error("API request failed:", `${BASE_URL}${path}`, error);
     throw new ApiError(
       "Cannot reach the server. Please check that the API is running.",
       0
