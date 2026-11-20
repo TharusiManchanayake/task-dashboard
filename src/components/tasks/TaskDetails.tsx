@@ -9,7 +9,7 @@ import { formatDate, formatDateTime, isOverdue } from "@/lib/utils";
 import { PriorityBadge, StatusBadge } from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import ConfirmDialog from "@/components/ui/ConfirmDialog";
-import ErrorState from "@/components/ui/ErrorState";
+import ResourceError from "@/components/ui/ResourceError";
 import Skeleton from "@/components/ui/Skeleton";
 
 function DetailItem({ icon, label, children }: { icon: ReactNode; label: string; children: ReactNode }) {
@@ -63,7 +63,7 @@ export default function TaskDetails({ id }: { id: number }) {
 
       {isLoading && <DetailsSkeleton />}
 
-      {isError && <ErrorState message={error.message} onRetry={() => refetch()} />}
+      {isError && <ResourceError error={error} onRetry={() => refetch()} />}
 
       {task && (
         <article className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">

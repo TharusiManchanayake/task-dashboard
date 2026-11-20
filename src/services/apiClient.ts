@@ -26,8 +26,7 @@ export async function apiRequest<T>(
 
   try {
     response = await fetch(`${BASE_URL}${path}`, { ...options, headers });
-  } catch (error) {
-    console.error("API request failed:", `${BASE_URL}${path}`, error);
+  } catch {
     throw new ApiError(
       "Cannot reach the server. Please check that the API is running.",
       0

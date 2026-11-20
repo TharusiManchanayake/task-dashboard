@@ -5,7 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import TaskForm from "@/components/tasks/TaskForm";
 import Skeleton from "@/components/ui/Skeleton";
-import ErrorState from "@/components/ui/ErrorState";
+import ResourceError from "@/components/ui/ResourceError";
 import { useTask, useUpdateTask } from "@/hooks/useTasks";
 
 export default function EditTaskPage() {
@@ -36,7 +36,7 @@ export default function EditTaskPage() {
         </div>
       )}
 
-      {isError && <ErrorState message={error.message} onRetry={() => refetch()} />}
+      {isError && <ResourceError error={error} onRetry={() => refetch()} />}
 
       {task && (
         <TaskForm
