@@ -1,16 +1,136 @@
 {
   "tasks": [
-    { "id": 1, "title": "Design login page", "description": "Create wireframes and final UI for the login screen.", "status": "done", "priority": "high", "assignee": "Kasun Perera", "dueDate": "2026-11-05", "createdAt": "2026-10-28T09:00:00.000Z", "updatedAt": "2026-11-04T10:00:00.000Z" },
-    { "id": 2, "title": "Set up CI pipeline", "description": "Configure GitHub Actions for lint, test and build.", "status": "in_progress", "priority": "medium", "assignee": "Nimali Silva", "dueDate": "2026-11-22", "createdAt": "2026-10-30T09:00:00.000Z", "updatedAt": "2026-11-10T10:00:00.000Z" },
-    { "id": 3, "title": "Write API documentation", "description": "Document all REST endpoints with examples.", "status": "todo", "priority": "low", "assignee": "Tharusi Manchanayake", "dueDate": "2026-11-30", "createdAt": "2026-11-01T09:00:00.000Z", "updatedAt": "2026-11-01T09:00:00.000Z" },
-    { "id": 4, "title": "Fix cart total bug", "description": "Total is wrong when a discount code is applied twice.", "status": "in_progress", "priority": "high", "assignee": "Dilshan Fernando", "dueDate": "2026-11-20", "createdAt": "2026-11-02T09:00:00.000Z", "updatedAt": "2026-11-12T10:00:00.000Z" },
-    { "id": 5, "title": "User feedback survey", "description": "Prepare and send the Q4 survey to active users.", "status": "todo", "priority": "medium", "assignee": "Nimali Silva", "dueDate": "2026-12-03", "createdAt": "2026-11-03T09:00:00.000Z", "updatedAt": "2026-11-03T09:00:00.000Z" },
-    { "id": 6, "title": "Database backup script", "description": "Nightly backup with 7-day retention.", "status": "done", "priority": "medium", "assignee": "Kasun Perera", "dueDate": "2026-11-08", "createdAt": "2026-11-03T11:00:00.000Z", "updatedAt": "2026-11-08T10:00:00.000Z" },
-    { "id": 7, "title": "Mobile layout review", "description": "Check every page at 360px and 768px widths.", "status": "todo", "priority": "high", "assignee": "Tharusi Manchanayake", "dueDate": "2026-11-25", "createdAt": "2026-11-04T09:00:00.000Z", "updatedAt": "2026-11-04T09:00:00.000Z" },
-    { "id": 8, "title": "Refactor auth service", "description": "Split token logic from user logic.", "status": "in_progress", "priority": "low", "assignee": "Dilshan Fernando", "dueDate": "2026-12-10", "createdAt": "2026-11-05T09:00:00.000Z", "updatedAt": "2026-11-14T10:00:00.000Z" },
-    { "id": 9, "title": "Accessibility audit", "description": "Run axe and fix contrast and label issues.", "status": "todo", "priority": "medium", "assignee": "Nimali Silva", "dueDate": "2026-12-01", "createdAt": "2026-11-06T09:00:00.000Z", "updatedAt": "2026-11-06T09:00:00.000Z" },
-    { "id": 10, "title": "Update dependencies", "description": "Upgrade minor versions and run regression tests.", "status": "done", "priority": "low", "assignee": "Kasun Perera", "dueDate": "2026-11-12", "createdAt": "2026-11-06T11:00:00.000Z", "updatedAt": "2026-11-12T10:00:00.000Z" },
-    { "id": 11, "title": "Onboarding email flow", "description": "Three-step welcome email sequence.", "status": "in_progress", "priority": "medium", "assignee": "Tharusi Manchanayake", "dueDate": "2026-11-28", "createdAt": "2026-11-07T09:00:00.000Z", "updatedAt": "2026-11-15T10:00:00.000Z" },
-    { "id": 12, "title": "Performance profiling", "description": "Find slow queries on the reports page.", "status": "todo", "priority": "high", "assignee": "Dilshan Fernando", "dueDate": "2026-11-21", "createdAt": "2026-11-08T09:00:00.000Z", "updatedAt": "2026-11-08T09:00:00.000Z" }
+    {
+      "id": 1,
+      "title": "Design login page",
+      "description": "Create wireframes and final UI for the login screen.",
+      "status": "done",
+      "priority": "high",
+      "assignee": "Kasun Perera",
+      "dueDate": "2026-11-05",
+      "createdAt": "2026-10-28T09:00:00.000Z",
+      "updatedAt": "2026-11-04T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Set up CI pipeline",
+      "description": "Configure GitHub Actions for lint, test and build.",
+      "status": "in_progress",
+      "priority": "medium",
+      "assignee": "Nimali Silva",
+      "dueDate": "2026-11-22",
+      "createdAt": "2026-10-30T09:00:00.000Z",
+      "updatedAt": "2026-11-10T10:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "Write API documentation",
+      "description": "Document all REST endpoints with examples.",
+      "status": "todo",
+      "priority": "low",
+      "assignee": "Tharusi Manchanayake",
+      "dueDate": "2026-11-30",
+      "createdAt": "2026-11-01T09:00:00.000Z",
+      "updatedAt": "2026-11-01T09:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "Fix cart total bug",
+      "description": "Total is wrong when a discount code is applied twice.",
+      "status": "in_progress",
+      "priority": "high",
+      "assignee": "Dilshan Fernando",
+      "dueDate": "2026-11-20",
+      "createdAt": "2026-11-02T09:00:00.000Z",
+      "updatedAt": "2026-11-12T10:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "title": "User feedback survey",
+      "description": "Prepare and send the Q4 survey to active users.",
+      "status": "todo",
+      "priority": "medium",
+      "assignee": "Nimali Silva",
+      "dueDate": "2026-12-03",
+      "createdAt": "2026-11-03T09:00:00.000Z",
+      "updatedAt": "2026-11-03T09:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "title": "Database backup script",
+      "description": "Nightly backup with 7-day retention.",
+      "status": "done",
+      "priority": "medium",
+      "assignee": "Kasun Perera",
+      "dueDate": "2026-11-08",
+      "createdAt": "2026-11-03T11:00:00.000Z",
+      "updatedAt": "2026-11-08T10:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "title": "Mobile layout review",
+      "description": "Check every page at 360px and 768px widths.",
+      "status": "todo",
+      "priority": "high",
+      "assignee": "Tharusi Manchanayake",
+      "dueDate": "2026-11-25",
+      "createdAt": "2026-11-04T09:00:00.000Z",
+      "updatedAt": "2026-11-04T09:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "title": "Refactor auth service",
+      "description": "Split token logic from user logic.",
+      "status": "in_progress",
+      "priority": "low",
+      "assignee": "Dilshan Fernando",
+      "dueDate": "2026-12-10",
+      "createdAt": "2026-11-05T09:00:00.000Z",
+      "updatedAt": "2026-11-14T10:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "title": "Accessibility audit",
+      "description": "Run axe and fix contrast and label issues.",
+      "status": "todo",
+      "priority": "medium",
+      "assignee": "Nimali Silva",
+      "dueDate": "2026-12-01",
+      "createdAt": "2026-11-06T09:00:00.000Z",
+      "updatedAt": "2026-11-06T09:00:00.000Z"
+    },
+    {
+      "id": 10,
+      "title": "Update dependencies",
+      "description": "Upgrade minor versions and run regression tests.",
+      "status": "done",
+      "priority": "low",
+      "assignee": "Kasun Perera",
+      "dueDate": "2026-11-12",
+      "createdAt": "2026-11-06T11:00:00.000Z",
+      "updatedAt": "2026-11-12T10:00:00.000Z"
+    },
+    {
+      "id": 12,
+      "title": "Performance profiling",
+      "description": "Find slow queries on the reports page.",
+      "status": "todo",
+      "priority": "medium",
+      "assignee": "Dilshan Fernando",
+      "dueDate": "2026-11-21",
+      "createdAt": "2026-11-08T09:00:00.000Z",
+      "updatedAt": "2026-11-20T07:02:45.080Z"
+    },
+    {
+      "title": "Design the News feed page",
+      "description": "Should design new feed page with image upload kajfsa josjfojf jwfw jlafjwal",
+      "status": "todo",
+      "priority": "low",
+      "assignee": "Nawodya",
+      "dueDate": "2026-11-27",
+      "createdAt": "2026-11-19T12:27:14.603Z",
+      "updatedAt": "2026-11-20T07:02:30.505Z",
+      "id": 13
+    }
   ]
 }
