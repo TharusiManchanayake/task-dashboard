@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CheckSquare, LayoutDashboard, ListTodo, Menu, Plus, X } from "lucide-react";
@@ -17,6 +17,24 @@ export default function AppShell({ children }: { children: ReactNode }) {
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+  // Close the drawer with Escape and stop the page scrolling behind it
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [menuOpen]);
 
   const nav = (
     <nav aria-label="Main navigation" className="flex flex-1 flex-col gap-1 px-3 py-4">
@@ -50,6 +68,13 @@ export default function AppShell({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-indigo-600 focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white"
+      >
+        Skip to main content
+      </a>
+
       {/* Desktop sidebar */}
       <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-slate-200 bg-white lg:flex">
         {brand}
@@ -68,7 +93,6 @@ export default function AppShell({ children }: { children: ReactNode }) {
       )}
 
       <div className="lg:pl-64">
-        {/* Header */}
         <header className="sticky top-0 z-20 flex h-16 items-center justify-between border-b border-slate-200 bg-white/90 px-4 backdrop-blur sm:px-6">
           <button
             type="button"
@@ -91,7 +115,9 @@ export default function AppShell({ children }: { children: ReactNode }) {
           </Link>
         </header>
 
-        <main className="mx-auto max-w-6xl p-4 sm:p-6">{children}</main>
+        <main id="main-content" tabIndex={-1} className="mx-auto max-w-6xl p-4 outline-none sm:p-6">
+          {children}
+        </main>
       </div>
     </div>
   );

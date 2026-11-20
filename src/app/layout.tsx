@@ -5,7 +5,10 @@ import AppShell from "@/components/layout/AppShell";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "TaskBoard | Task Management Dashboard",
+  title: {
+    default: "TaskBoard | Task Management Dashboard",
+    template: "%s | TaskBoard",
+  },
   description: "Manage, track and organise your tasks.",
 };
 

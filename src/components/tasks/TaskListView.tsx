@@ -54,18 +54,9 @@ export default function TaskListView() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <h1 className="text-2xl font-bold text-slate-900">Tasks</h1>
-          <p className="text-sm text-slate-500">Search, filter and manage all your tasks.</p>
-        </div>
-        <Link
-          href="/tasks/new"
-          className="inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
-        >
-          <Plus className="h-4 w-4" aria-hidden="true" />
-          New Task
-        </Link>
+      <div>
+        <h1 className="text-2xl font-bold text-slate-900">Tasks</h1>
+        <p className="text-sm text-slate-500">Search, filter and manage all your tasks.</p>
       </div>
 
       <TaskFilters filters={filters} hasActiveFilters={hasActiveFilters} onChange={setFilters} onReset={resetFilters} />
