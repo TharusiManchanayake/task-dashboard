@@ -10,7 +10,7 @@ interface TaskTableProps {
 }
 
 const iconButton =
-  "rounded-lg p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500";
+  "rounded-lg p-2.5 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 md:p-2";
 
 function Actions({ task, onDelete }: { task: Task; onDelete: (task: Task) => void }) {
   return (

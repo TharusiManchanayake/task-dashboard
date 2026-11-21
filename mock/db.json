@@ -9,7 +9,7 @@
       "assignee": "Kasun Perera",
       "dueDate": "2026-11-05",
       "createdAt": "2026-10-28T09:00:00.000Z",
-      "updatedAt": "2026-11-04T10:00:00.000Z"
+      "updatedAt": "2026-11-21T06:22:37.946Z"
     },
     {
       "id": 2,
@@ -108,7 +108,7 @@
       "assignee": "Kasun Perera",
       "dueDate": "2026-11-12",
       "createdAt": "2026-11-06T11:00:00.000Z",
-      "updatedAt": "2026-11-12T10:00:00.000Z"
+      "updatedAt": "2026-11-21T06:23:18.667Z"
     },
     {
       "id": 12,
@@ -122,14 +122,14 @@
       "updatedAt": "2026-11-20T07:02:45.080Z"
     },
     {
-      "title": "Design the News feed page",
-      "description": "Should design new feed page with image upload kajfsa josjfojf jwfw jlafjwal",
-      "status": "todo",
-      "priority": "low",
-      "assignee": "Nawodya",
+      "title": "Design the News Feed page",
+      "description": "Design new feed page with image upload.",
+      "status": "in_progress",
+      "priority": "medium",
+      "assignee": "Nethmi Sehansa",
       "dueDate": "2026-11-27",
       "createdAt": "2026-11-19T12:27:14.603Z",
-      "updatedAt": "2026-11-20T07:02:30.505Z",
+      "updatedAt": "2026-11-21T06:14:18.792Z",
       "id": 13
     }
   ]
