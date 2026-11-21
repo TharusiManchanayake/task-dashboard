@@ -132,19 +132,19 @@ mock/
 
 | Dashboard | Task list |
 |---|---|
-| ![Dashboard](screenshots/dashboard.png) | ![Task list](screenshots/task-list.png) |
+| ![Dashboard](screenshots/dashboard.png) | ![Task list](screenshots/task_list.png) |
 
 ### Forms and details
 
 | Create form with validation | Task details |
 |---|---|
-| ![Form validation](screenshots/form-validation.png) | ![Task details](screenshots/task-details.png) |
+| ![Form validation](screenshots/form_validation.png) | ![Task details](screenshots/task_details.png) |
 
 ### UI states
 
 | Delete confirmation | Empty state | Error state |
 |---|---|---|
-| ![Delete dialog](screenshots/delete-dialog.png) | ![Empty state](screenshots/empty-state.png) | ![Error state](screenshots/error-state.png) |
+| ![Delete dialog](screenshots/delete_task.png) | ![Empty state](screenshots/empty_state.png) | ![Error state](screenshots/error_state.png) |
 
 ### Responsive design
 
